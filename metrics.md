@@ -1,5 +1,3 @@
-mathjax: true
-
 # Table of Contents
 [Project Statement and Goals](https://john-daciuk.github.io/spotify/project-statement-and-goals.html) <br>
 [Motivation and Background](https://john-daciuk.github.io/spotify/motivation-and-background.html) <br>
@@ -22,3 +20,5 @@ This all sounds all the more reasonable in light of the fact that this is one of
 R-Precision Metric =  ${Prediction}  {Truth}   /  {Truth}$ , where {Truth} is the set of tracks matching tracks in the test set portion of a playlist, and {Prediction} is the set of top predicted tracks, constrained to be equal in length to {Truth}.
 
 We imported the Spotify Competition metrics library into our notebook.
+
+$x^2$
