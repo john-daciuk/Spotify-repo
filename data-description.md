@@ -34,3 +34,26 @@ This dataset contains 5.4 GB of data and was created in 2018. It contains the fo
 - Duration
 - Album Name
 
+To get an idea of some broad features of the dataset, we plot some distributions:
+
+# Histogram of playlist length
+
+```
+from length_hist import length
+#length is a dictionary that holds the playlist length distributions
+
+histogram_data = []
+for key in length:
+    histogram_data += [key] * length[key]
+
+fig, ax = plt.subplots(1,1, figsize = (20,12))
+ax.hist(histogram_data, bins = 40, color = 'springgreen', alpha = .8)
+
+
+ax.set_xlabel("Songs in Playlist", fontsize = 25, labelpad = 20)
+ax.set_ylabel("Frequency", fontsize = 25, labelpad = 20)
+ax.set_title("Distribution of Playlist Length", fontsize = 30, pad = 50)
+ax.set_xlim(0,260)
+ax.set_xticks(np.round(np.linspace(0, 250, 11)))
+```
+
