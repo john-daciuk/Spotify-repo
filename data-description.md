@@ -57,3 +57,4 @@ ax.set_xlim(0,260)
 ax.set_xticks(np.round(np.linspace(0, 250, 11)))
 ```
 ![Playlist Length Histogram](spotify/Length_Hist.png)
+<img src="spotify/Length_Hist.png" width="800" />
