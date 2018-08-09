@@ -36,7 +36,7 @@ This dataset contains 5.4 GB of data and was created in 2018. It contains the fo
 
 To get an idea of some broad features of the dataset, we plot some distributions:
 
-# Histogram of playlist length
+**Histogram of playlist length**
 
 ```
 from length_hist import length
@@ -56,4 +56,27 @@ ax.set_title("Distribution of Playlist Length", fontsize = 30, pad = 50)
 ax.set_xlim(0,260)
 ax.set_xticks(np.round(np.linspace(0, 250, 11)))
 ```
-![Table1](Length_Hist.png)
+![fig1](images/Length_Hist.png)
+
+**Histogram of playlist follower count**
+
+```
+#followers is a dictionary with playlist follower histogram data
+from followers import followers
+
+followers_hist = []
+for key in followers:
+    followers_hist += [key] * followers[key]
+
+fig, ax = plt.subplots(1,1, figsize = (20, 12))
+ax.hist(followers_hist, bins = 1000, color = 'springgreen', alpha = .8)
+
+titles = ["Linear X Axis", "Logorithmic X Axis"]
+ax.set_xlim(5,3000)
+ax.set_xlabel("Follower Count", fontsize = 25, labelpad = 20)
+ax.set_ylabel("Frequency (log scale)", fontsize = 25, labelpad = 20)
+ax.set_title("Playlist Follower Count Distribution (" + titles[0] + ")", fontsize = 30, pad = 50)
+ax.set_yscale('symlog', linthreshy = 10)
+```
+![fig2](images/Followers_Hist_Linear.png)
+
