@@ -56,4 +56,4 @@ ax.set_title("Distribution of Playlist Length", fontsize = 30, pad = 50)
 ax.set_xlim(0,260)
 ax.set_xticks(np.round(np.linspace(0, 250, 11)))
 ```
-![Table1](spotify/Length_Hist.png)
+![Table1](Length_Hist.png)
