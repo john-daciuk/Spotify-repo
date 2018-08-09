@@ -21,4 +21,4 @@ R-Precision Metric =  ${Prediction}  {Truth}   /  {Truth}$ , where {Truth} is th
 
 We imported the Spotify Competition metrics library into our notebook.
 
-$x^2$
+$$x^2$$
