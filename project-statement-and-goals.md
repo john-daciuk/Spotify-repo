@@ -1,4 +1,18 @@
-## Welcome to GitHub Pages
+## Table of Contents
+[Project Statement and Goals](https://github.com/john-daciuk/Spotify-repo/project-statement-and-goals.html)
+[Motivation and Background](https://github.com/john-daciuk/Spotify-repo/motivation-and-background.html)
+[Data Description](https://github.com/john-daciuk/Spotify-repo/data-description.html)
+[EDA](https://github.com/john-daciuk/Spotify-repo/eda.html)
+[Data Cleaning](https://github.com/john-daciuk/Spotify-repo/data-cleaning.html)
+[Metrics](https://github.com/john-daciuk/Spotify-repo/metrics.html)
+[Data Cleaning](https://github.com/john-daciuk/Spotify-repo/data-cleaning.html)
+[Model Training](https://github.com/john-daciuk/Spotify-repo/model-training.html)
+[Interpreting the Model](https://github.com/john-daciuk/Spotify-repo/interpreting-the-model.html)
+[Model Testing and Results](https://github.com/john-daciuk/Spotify-repo/model-testing-and-results.html)
+[Literature Review](https://github.com/john-daciuk/Spotify-repo/literature-review.html)
+
+
+## Project Statement
 
 You can use the [editor on GitHub](https://github.com/john-daciuk/Spotify-repo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
