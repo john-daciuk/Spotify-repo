@@ -34,7 +34,7 @@ This dataset contains 5.4 GB of data and was created in 2018. It contains the fo
 - Album Name
 
 **Summary of data counts**
-[fig0](images/basic_stats.png)
+<img src="images/basic_stats.png" width="400">
 
 To get an idea of some broad features of the dataset, we plot some distributions:
 
@@ -138,8 +138,8 @@ ax.set_xlabel("Titles", fontsize = 20)
 ax.set_ylabel("Frequency in MPD", fontsize = 20)
 ax.set_title("Top 50 Playlist Titles", fontsize = 25, pad = 50)
 ```
-![fig4](images/top_playlist_titles.png)
+![fig4](images/top_playlist_title.png)
 
 **Most popular songs in MPD**
 
-![fig5](images/popular_songs.png)
+<img src="images/popular_songs.png" width="400">
