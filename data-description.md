@@ -38,7 +38,7 @@ To get an idea of some broad features of the dataset, we plot some distributions
 
 **Histogram of playlist length**
 
-```
+```python
 from length_hist import length
 #length is a dictionary that holds the playlist length distributions
 
