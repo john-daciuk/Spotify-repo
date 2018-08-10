@@ -11,7 +11,7 @@
 [Literature Review](https://john-daciuk.github.io/spotify/literature-review.html) <br>
 
 # Million Playlist Dataset:
-This dataset contains 5.4 GB of data and was created in 2018. It contains the following information for each playlist and track within:
+This dataset contains 5.4 GB of data and was created in 2017. It contains the following information for each playlist and track within:
 
 **Playlist specific features:**
 - Playlist name
@@ -33,7 +33,7 @@ This dataset contains 5.4 GB of data and was created in 2018. It contains the fo
 - Duration
 - Album Name
 
-To get an idea of some broad features of the dataset, we plot some distributions:
+To get an idea of some broad features of the dataset, we plot some distributions.  Visualizing the number of tracks in the playlists and the number of followers across the playlists was useful in thinking about how some modeling ideas may work.
 
 **Histogram of playlist length**
 
@@ -56,6 +56,7 @@ ax.set_xlim(0,260)
 ax.set_xticks(np.round(np.linspace(0, 250, 11)))
 ```
 ![fig1](images/Length_Hist.png)
+Playlist can go down to 5 tracks in length, but the large majority of playlists have enough tracks for a model to learn on.
 
 **Histogram of playlist follower count**
 
