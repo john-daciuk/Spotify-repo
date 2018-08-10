@@ -141,4 +141,4 @@ ax.set_title("Top 50 Playlist Titles", fontsize = 25, pad = 50)
 ![fig4](images/top_playlist_title.png)
 
 **Most popular songs in MPD**
-![fig5](images/popular_songs.png =50x50)
+![fig5](images/popular_songs.png) <!-- .element height="50%" width="50%" -->
