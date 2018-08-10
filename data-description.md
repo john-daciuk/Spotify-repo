@@ -137,6 +137,6 @@ ax.set_title("Top 50 Playlist Titles", fontsize = 25, pad = 50)
 ```
 ![fig4](images/top_playlist_title.png)
 
-**Summary Stats**          &nbsp; &nbsp; &nbsp;                 **Most popular songs in MPD**
+ &nbsp; &nbsp; &nbsp; **Summary Stats**   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;       **Most popular songs in MPD**
 
 <img src="images/summary_stats.png" width="700">
