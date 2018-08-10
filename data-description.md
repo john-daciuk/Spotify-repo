@@ -33,7 +33,9 @@ This dataset contains 5.4 GB of data and was created in 2017. It contains the fo
 - Duration
 - Album Name
 
+
 To get an idea of some broad features of the dataset, we plot some distributions.  Visualizing the number of tracks in the playlists and the number of followers across the playlists was useful in thinking about how some modeling ideas may work.
+
 
 **Histogram of playlist length**
 
@@ -58,6 +60,7 @@ ax.set_xticks(np.round(np.linspace(0, 250, 11)))
 ![fig1](images/Length_Hist.png)
 Playlist can go down to 5 tracks in length, but the large majority of playlists have enough tracks for a model to learn on.
 
+
 **Histogram of playlist follower count**
 
 ```python
@@ -79,6 +82,7 @@ ax.set_title("Playlist Follower Count Distribution (" + titles[0] + ")", fontsiz
 ax.set_yscale('symlog', linthreshy = 10)
 ```
 ![fig2](images/Followers_Hist_Linear.png)
+
 
 **Popular artists in MPD**
 
@@ -112,6 +116,7 @@ ax.set_title("Top 30 Artists", fontsize = 25, pad = 50)
 ```
 ![fig3](images/top_artists.png)
 
+
 **Top playlist titles in MPD**
 
 ```python
@@ -137,6 +142,7 @@ ax.set_ylabel("Frequency in MPD", fontsize = 20)
 ax.set_title("Top 50 Playlist Titles", fontsize = 25, pad = 50)
 ```
 ![fig4](images/top_playlist_title.png)
+
 
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Summary Stats**   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **Most popular songs in MPD**
 
