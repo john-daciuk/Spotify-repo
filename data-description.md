@@ -33,9 +33,6 @@ This dataset contains 5.4 GB of data and was created in 2018. It contains the fo
 - Duration
 - Album Name
 
-**Summary of data counts**
-<img src="images/basic_stats.png" width="400">
-
 To get an idea of some broad features of the dataset, we plot some distributions:
 
 **Histogram of playlist length**
@@ -140,6 +137,6 @@ ax.set_title("Top 50 Playlist Titles", fontsize = 25, pad = 50)
 ```
 ![fig4](images/top_playlist_title.png)
 
-**Most popular songs in MPD**
+**Summary Stats                                         Most popular songs in MPD**
 
-<img src="images/popular_songs.png" width="400">
+![fig5](images/summary_stats.png)
