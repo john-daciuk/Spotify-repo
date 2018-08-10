@@ -139,4 +139,4 @@ ax.set_title("Top 50 Playlist Titles", fontsize = 25, pad = 50)
 
 **Summary Stats                                         Most popular songs in MPD**
 
-<img src="images/summary_stats.png" width="500">
+<img src="images/summary_stats.png" width="700">
