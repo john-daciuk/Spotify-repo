@@ -5,7 +5,6 @@
 [EDA](https://john-daciuk.github.io/spotify/eda.html) <br>
 [Data Cleaning](https://john-daciuk.github.io/spotify/data-cleaning.html) <br>
 [Metrics](https://john-daciuk.github.io/spotify/metrics.html) <br>
-[Data Cleaning](https://john-daciuk.github.io/spotify/data-cleaning.html) <br>
 [Model Training](https://john-daciuk.github.io/spotify/model-training.html) <br>
 [Interpreting the Model](https://john-daciuk.github.io/spotify/interpreting-the-model.html) <br>
 [Model Testing and Results](https://john-daciuk.github.io/spotify/model-testing-and-results.html) <br>
@@ -34,6 +33,9 @@ This dataset contains 5.4 GB of data and was created in 2018. It contains the fo
 - Duration
 - Album Name
 
+**Summary of data counts**
+[fig0](images/basic_stats.png)
+
 To get an idea of some broad features of the dataset, we plot some distributions:
 
 **Histogram of playlist length**
@@ -60,10 +62,9 @@ ax.set_xticks(np.round(np.linspace(0, 250, 11)))
 
 **Histogram of playlist follower count**
 
-```
+```python
 #followers is a dictionary with playlist follower histogram data
 from followers import followers
-[//]: # (Comment)
 
 followers_hist = []
 for key in followers:
@@ -81,3 +82,64 @@ ax.set_yscale('symlog', linthreshy = 10)
 ```
 ![fig2](images/Followers_Hist_Linear.png)
 
+**Popular artists in MPD**
+
+```python
+top_artists = []
+with open("/Users/johndaciuk/Desktop/Spotify Stats/top_artists.txt", 'r') as f:
+    for line in f:
+        info_dict = {}
+        info = line.split()
+        frequency = info[0]
+        artist = ""
+        for i in range(1, len(info)):
+            if i == len(info) - 1:
+                artist += str(info[i])
+            else:
+                artist += str(info[i]) + " "
+        frequency = int(frequency)
+        info_dict["frequency"] = frequency
+        info_dict["artist"] = artist
+        top_artists.append(info_dict)
+top = pd.DataFrame(top_artists)
+top.head(30)
+
+fig, ax = plt.subplots(1,1, figsize = (25,8))
+for tick in ax.get_xticklabels():
+    tick.set_rotation(90)
+ax.bar(top["artist"].iloc[0:30], top["frequency"].iloc[0:30], color = "mediumspringgreen")
+
+ax.set_ylabel("Frequency in MPD tracks", fontsize = 22, labelpad = 30)
+ax.set_title("Top 30 Artists", fontsize = 25, pad = 50)
+```
+![fig3](images/top_artists.png)
+
+**Top playlist titles in MPD**
+
+```python
+top_titles = []
+with open("/Users/johndaciuk/Desktop/Spotify Stats/top_playlist_titles.txt", 'r') as f:
+    for line in f:
+        info_dict = {}
+        info = line.split()
+        frequency, title = info[0], info[1]
+        frequency = int(frequency)
+        info_dict["frequency"] = frequency
+        info_dict["playlist title"] = title
+        top_titles.append(info_dict)
+top = pd.DataFrame(top_titles)
+
+fig, ax = plt.subplots(1,1, figsize = (25,6))
+for tick in ax.get_xticklabels():
+    tick.set_rotation(90)
+ax.bar(top["playlist title"].iloc[0:50], top["frequency"].iloc[0:50], color = "mediumspringgreen")
+
+ax.set_xlabel("Titles", fontsize = 20)
+ax.set_ylabel("Frequency in MPD", fontsize = 20)
+ax.set_title("Top 50 Playlist Titles", fontsize = 25, pad = 50)
+```
+![fig4](images/top_playlist_titles.png)
+
+**Most popular songs in MPD**
+
+![fig5](images/popular_songs.png)
